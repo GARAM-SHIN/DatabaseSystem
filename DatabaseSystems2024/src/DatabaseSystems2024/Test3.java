@@ -10,7 +10,7 @@ public class Test3
 					"jdbc:mysql://192.168.56.101:4567/madang",
 					"garam-shin", "1234");
 			Statement stmt=con.createStatement();
-			ResultSet rs=stmt.executeQuery("DELETE * FROM Book");
+			ResultSet rs=stmt.executeQuery("DELETE FROM Book WHERE bookid = '11'");
 			
 			while(rs.next())
 				System.out.println(rs.getInt(1)+"  "+rs.getString(2)+
